@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	a.button {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+a.button:hover { background: rgb(53, 167, 110); }
+a.button:active {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
+}
+</style>
+<style>
+   body {
+    background: url(2.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+   }
+  </style>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<center>
+<br><br>
+<h1><em>Регистрация нового пользователя</em></h1>
+<br><br><br><br><br>	
+<table>
+<tr>
+<td> Имя:</td>
+<td><input type=text name="FirstName" size=20></td>
+
+</tr>
+<tr>
+<td>Фамилия:</td>
+<td><input type=text name="LastName" size=20></td>
+</tr>
+
+<tr>
+<td>E-mail:</td>
+<td><input type=text name="Email" size=40></td>
+</tr>
+<tr>
+
+<td> Коментария:</td>
+
+<td><textarea name="Comments" rows=5 cols=40></textarea></td> </tr>
+ <tr>
+<td>Мужской</td>
+<td><input type="radio" name="Email" </td>
+
+<td>Женский<input type="radio" name="Email" td>
+</tr>
+
+<tr>
+<td>Я согласен с условиями:</td>
+<td><input type="checkbox" name="LastName"</td>
+</tr> 
+
+
+
+</table>
+
+
+
+<br><br>
+<!-- Trigger/Open The Modal -->
+<a href="#" class="button" id="myBtn">Регистрация</a>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Спасибо за регистрацию</p>
+  </div>
+
+</div>
+
+<script>
+// Получить модал
+var modal = document.getElementById("myModal");
+
+// Получить кнопку, которая открывает модальный
+var btn = document.getElementById("myBtn");
+
+// Получить элемент <span>, который закрывает модальное
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
